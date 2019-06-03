@@ -1,0 +1,8 @@
+matplotlib==3.0.0
+pandas==0.24.0
+cloudpickle==0.8.1
+scikit-learn==0.20.1
+tqdm==4.31.1
+https://download.pytorch.org/whl/cpu/torch-1.0.1-cp35-cp35m-win_amd64.whl ; python_version == '3.5'
+https://download.pytorch.org/whl/cu90/torch-1.0.1-cp36-cp36m-win_amd64.whl ; python_version == '3.6'
+https://download.pytorch.org/whl/cu90/torch-1.0.1-cp37-cp37m-win_amd64.whl ; python_version == '3.7'

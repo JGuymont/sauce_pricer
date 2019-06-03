@@ -1,0 +1,76 @@
+{
+    "model_class": "Imputer",
+    "model_name": "missing_value_imputer",
+    "data": {
+        "numerical_input_features": [
+            "StrikePrice",
+            "OPT_UNDL_PX",
+            "OPT_FINANCE_RT",
+            "OPT_DIV_YIELD",
+            "OPT_TIME_TO_MAT",
+            "Fx",
+            "Volatility_PX_MID",
+            "Volatility_PX_LAST",
+            "Volatility_BB_BST",
+            "Volatility_Ivol",
+            "PX_VOLUME",
+            "PX_VOLUME_1D"
+        ],
+        "categorical_input_features": null,
+        "output_features": ["PX_LAST"],
+        "batch_size_test": 1
+    },
+    "processing": {
+        "apply_log": true,
+        "scale": [-1, 1]
+    },
+    "training": {
+        "lr": 0.0001,
+        "weight_decay": 0.005,
+        "n_epochs": 100
+    },
+    "model": {
+        "max_iter": 10,
+        "tol": 0.001,
+        "input_dim": 12,
+        "mask_pct": 0.1,
+        "encoder_config": [
+            {
+                "type": "linear",
+                "param": {"in_features": 12, "out_features": 64}
+            },
+            {
+                "type": "batch_norm",
+                "param": {"num_features": 64}
+            },
+            {
+                "type": "relu",
+                "param": {}
+            },
+            {
+                "type": "linear",
+                "param": {"in_features": 64, "out_features": 64}
+            },
+            {
+                "type": "batch_norm",
+                "param": {"num_features": 64}
+            },
+            {
+                "type": "relu",
+                "param": {}
+            },
+            {
+                "type": "linear",
+                "param": {"in_features": 64, "out_features": 4}
+            },
+            {
+                "type": "batch_norm",
+                "param": {"num_features": 4}
+            },
+            {
+                "type": "relu",
+                "param": {}
+            }
+        ]
+    }
+}

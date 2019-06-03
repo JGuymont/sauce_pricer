@@ -1,0 +1,6 @@
+NUMERICAL = 'numerical'
+MIX = 'mix'
+SUPERVISED = 'supervised'
+UNSUPERVISED = 'unsupervised'
+CPU = 'cpu'
+CUDA = 'cuda'

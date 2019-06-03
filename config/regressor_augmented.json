@@ -1,0 +1,40 @@
+{
+    "model_class": "MLPRegressor",
+    "model_name": "mlp_regressor_augmented",
+    "data": {
+        "numerical_input_features": [
+            "StrikePrice",
+            "OPT_UNDL_PX",
+            "OPT_FINANCE_RT",
+            "OPT_DIV_YIELD",
+            "OPT_TIME_TO_MAT",
+            "Fx",
+            "Volatility_PX_MID",
+            "Volatility_PX_LAST",
+            "Volatility_BB_BST",
+            "Volatility_Ivol",
+            "PX_VOLUME",
+            "PX_VOLUME_1D"
+        ],
+        "categorical_input_features": null,
+        "output_features": ["PX_LAST"],
+        "batch_size_train": 256,
+        "batch_size_valid": 1000,
+        "batch_size_test": 1000
+    },
+    "processing": {
+        "apply_log": true,
+        "scale": [-1, 1]
+    },
+    "model": {
+        "n_numerical_features": 12,
+        "hidden_dim": 128,
+        "output_dim": 1,
+        "dropout": 0.4
+    },
+    "training": {
+        "lr": 0.00001,
+        "weight_decay": 0.0005,
+        "n_epochs": 100
+    }
+}
