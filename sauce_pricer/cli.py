@@ -33,25 +33,25 @@ Available sub-commands:
 
     @staticmethod
     def train():
-        from option_pricer import train
+        from sauce_pricer import train
         train.cli(sys.argv[2:])
 
     @staticmethod
     def predict():
-        from option_pricer import predict
+        from sauce_pricer import predict
         predict.cli(sys.argv[2:])
 
     @staticmethod
     def visualize():
-        from option_pricer import visualize
+        from sauce_pricer import visualize
         visualize.cli(sys.argv[2:])
 
     @staticmethod
     def split_data():
-        from option_pricer import split_data
+        from sauce_pricer import split_data
         split_data.cli(sys.argv[2:])
 
     @staticmethod
     def merge():
-        from option_pricer import merge
+        from sauce_pricer import merge
         merge.cli(sys.argv[2:])

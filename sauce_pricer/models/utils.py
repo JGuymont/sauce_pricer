@@ -8,7 +8,7 @@ import torch
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
 
-from option_pricer.constants import CUDA, CPU
+from sauce_pricer.constants import CUDA, CPU
 
 
 def load_model_state(path: str, device: torch.device):
